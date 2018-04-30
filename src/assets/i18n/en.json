@@ -1,0 +1,50 @@
+{
+  "system": {
+    "name": "唯品會後台管理"
+  },
+  "list": {
+    "stats_manage": {
+      "title": "數據管理",
+      "dashboard": "統計概覽",
+      "daily_log": "日誌管理",
+      "analysis": "統計分析管理",
+      "audit_log": "安全日誌"
+    },
+    "qa_manage": {
+      "title": "問答管理",
+      "qalist": "問答庫",
+      "qatest": "對話測試"
+    },
+    "dictionary": "詞庫管理",
+    "robot_setting": {
+      "title": "機器人設置",
+      "robot": "形象設置",
+      "skill": "技能設置",
+      "chat": "話術設置"
+    },
+    "switch_manage": "開關管理",
+    "privilege_manage": {
+      "title": "權限管理",
+      "role_manage": "角色管理",
+      "user_manage": "用戶管理"
+    }
+  },
+  "qalist": {
+    "validated_duration": "生效時間",
+    "to": "至",
+    "more": "更多操作",
+    "filter": "篩選條件",
+    "keywords": "關鍵字查詢",
+    "query": "查询",
+    "batch_import": "批量導入",
+    "batch_export": "批量導出",
+    "add_qa": "新增問答",
+    "delete": "删除",
+    "category": "维度",
+    "command": "指令"
+  },
+  "dictionary": {
+    "batch_import": "批量導入詞庫",
+    "batch_export": "批量導出詞庫"
+  }
+}
