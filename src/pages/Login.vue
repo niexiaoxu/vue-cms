@@ -77,7 +77,8 @@ export default {
     errorMsgShow (errorMsg) {
       this.$message({
         message: errorMsg,
-        type: 'error'
+        type: 'error',
+        showClose: true
       })
     },
     msgShow (msg) {
