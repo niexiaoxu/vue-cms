@@ -1,10 +1,11 @@
 const en = {
   baseInfo: {
+    'cms-title': 'Content Manage System'
   },
   message: {
     'login': 'login',
     'register': 'register',
-    'forgetPassword': 'Have you forgetten password ?',
+    'forgetPassword': 'Have you forgetten password?',
     'default-regist-message': 'Please contact the administrator'
   },
   placeHolder: {

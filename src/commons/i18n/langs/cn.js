@@ -1,11 +1,12 @@
 const cn = {
   baseInfo: {
+    'cms-title': '后台管理系统'
   },
   message: {
     'login': '登录',
     'register': '注册',
-    'forgetPassword': '忘记密码 ?',
-    'default-regist-message': '请联系管理员'
+    'forgetPassword': '忘记密码?',
+    'default-regist-message': '功能暂未开放, 请联系管理员'
   },
   placeHolder: {
     'account': '请输入您的账号',

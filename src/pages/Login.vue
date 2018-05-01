@@ -9,8 +9,12 @@
         </el-option>
       </el-select>
     </div>
+    <div class="title-show">{{$t('baseInfo.cms-title')}}</div>
     <div class="login-form">
       <form name ='form' action="">
+        <el-row :gutter ="10" class="login-icon-hight">
+          <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div><img src="../assets/cms-login.png" class="login-img"/></div></el-col>
+        </el-row>
         <el-row :gutter ="20" class="row-hight">
           <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><el-input :placeholder="$t('placeHolder.account')" v-model="account" clearable></el-input></el-col>
         </el-row>
@@ -21,8 +25,8 @@
           <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><p class="login-p">{{$t('message.forgetPassword')}}</p></el-col>
         </el-row>
         <el-row :gutter ="15" class="row-hight">
-          <el-col :xs="2" :sm="3" :md="5" :lg="3" :xl="4"><el-button type="primary" @click="login" size="medium" icon="el-icon-success">{{$t('message.login')}}</el-button></el-col>
-          <el-col :xs="2" :sm="3" :md="5" :lg="3" :xl="7"><el-button type="primary" @click="rigist" size="medium" icon="el-icon-zoom-in">{{$t('message.register')}}</el-button></el-col>
+          <el-col :xs="2" :sm="3" :md="5" :lg="3" :xl="6"><el-button type="primary" @click="login" size="medium" icon="el-icon-success">{{$t('message.login')}}</el-button></el-col>
+          <el-col :xs="2" :sm="3" :md="5" :lg="3" :xl="5"><el-button type="primary" @click="rigist" size="medium" icon="el-icon-zoom-in">{{$t('message.register')}}</el-button></el-col>
         </el-row>
       </form>
     </div>
@@ -68,7 +72,7 @@ export default {
       })
       setTimeout(() => {
         loading.close()
-      }, 2000)
+      }, 1000)
     },
     changeLang (language) {
       localStorage.setItem('lang', language)
@@ -82,7 +86,10 @@ export default {
       })
     },
     msgShow (msg) {
-      this.$message(msg)
+      this.$message({
+        message: msg,
+        showClose: true
+      })
     }
   }
 }
@@ -90,8 +97,13 @@ export default {
 </script>
 
 <style>
+  .login-icon-hight{
+    margin-top: 0px;
+  }
   .row-hight{
     margin-top: 20px;
+    margin-left: 5%;
+    /*margin-right: -7.5px;*/
   }
   .row-hight-message{
     margin-top: 1px;
@@ -105,12 +117,30 @@ export default {
     right: 30px;
     top: -75px;
     z-index:999;
+    width: 130px;
+  }
+  .title-show{
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+    font-family: "Segoe UI Black";
+    position: absolute;
+    top: -70px;
+    z-index: 999;
+    margin-left: 8%;
+    width: 500px;
   }
   .login-form{
     padding-left: 30%;
+    margin-top: -15%;
   }
   .login-p{
     font-size: xx-small;
     font-family: Consolas;
+  }
+  .login-img{
+    width: 150px;
+    height: 150px;
+    margin-left: 18%;
   }
 </style>
