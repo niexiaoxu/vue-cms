@@ -3,6 +3,7 @@ const cn = {
     'cms-title': '后台管理系统'
   },
   message: {
+    'reset': '重置',
     'login': '登录',
     'register': '注册',
     'forgetPassword': '忘记密码?',

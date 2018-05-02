@@ -3,6 +3,7 @@ const en = {
     'cms-title': 'Content Manage System'
   },
   message: {
+    'reset': 'reset',
     'login': 'login',
     'register': 'register',
     'forgetPassword': 'Have you forgetten password?',
