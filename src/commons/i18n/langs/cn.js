@@ -1,6 +1,6 @@
 const cn = {
   baseInfo: {
-    'cms-title': '后台管理系统'
+    'cms-title': 'VCA后台管理系统'
   },
   message: {
     'reset': '重置',

@@ -1,6 +1,6 @@
 const en = {
   baseInfo: {
-    'cms-title': 'Content Manage System'
+    'cms-title': 'VCA Manage System'
   },
   message: {
     'reset': 'reset',

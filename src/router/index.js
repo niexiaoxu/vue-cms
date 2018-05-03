@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// import pages from '@/pages'
 import Login from '@/pages/Login'
 import Home from '@/pages/Home'
 import Test from '@/pages/Test'
@@ -25,3 +26,17 @@ export default new Router({
     }
   ]
 })
+//
+// const routes = []
+//
+// Object.keys(pages).forEach((component) => {
+//   routes.push({
+//     path: `/${pages[component].name}`,
+//     name: component,
+//     component: pages[component]
+//   })
+// })
+//
+// export default new Router({
+//   routes
+// })
