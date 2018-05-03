@@ -4,11 +4,11 @@
     <div class="login-head">
       <el-row :gutter="110">
         <!--标题-->
-        <el-col :xs="18" :sm="20" :md="20" :lg="20" :xl="20" >
+        <el-col :xs="18" :sm="19" :md="20" :lg="20" :xl="20" >
           <div class="login-top-ms">{{$t('baseInfo.cms-title')}}</div>
         </el-col>
         <!--语言栏-->
-        <el-col :xs="3" :sm="4" :md="4" :lg="4" :xl="4" >
+        <el-col :xs="3" :sm="5" :md="4" :lg="4" :xl="4" >
         <el-select v-model="language" size="medium" @change="changeLang(language)">
           <el-option v-for="item in options" :key="item.language" :label="item.label" :value="item.language">
           </el-option>
