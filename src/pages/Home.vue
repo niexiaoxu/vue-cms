@@ -161,7 +161,7 @@ export default {
     }
     return {
       // isIndeterminate: true,
-      tableData: Array(20).fill(item),
+      tableData: Array(10).fill(item),
       select: '',
       select_value: '',
       currentPage1: 5,

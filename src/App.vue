@@ -12,6 +12,7 @@ export default {
 
 <style>
   #app{
-    background-color:rgba(63, 60, 84, 0.69)
+    background-color:rgba(245, 247, 245, 0.87);
+    /*margin: 0% 0%;*/
   }
 </style>

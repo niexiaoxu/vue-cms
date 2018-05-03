@@ -1,15 +1,15 @@
 <template>
   <div class="login-wrap">
     <!--头部-->
-    <div>
-      <el-row :gutter="24">
+    <div class="login-head">
+      <el-row :gutter="110">
         <!--标题-->
-        <el-col :xs="18" :sm="20" :md="21" :lg="21" :xl="22">
+        <el-col :xs="18" :sm="20" :md="20" :lg="20" :xl="20" >
           <div class="login-top-ms">{{$t('baseInfo.cms-title')}}</div>
         </el-col>
         <!--语言栏-->
-        <el-col :xs="6" :sm="4" :md="3" :lg="3" :xl="2">
-        <el-select v-model="language" placeholder="请选择语言" size="medium" @change="changeLang(language)">
+        <el-col :xs="3" :sm="4" :md="4" :lg="4" :xl="4" >
+        <el-select v-model="language" size="medium" @change="changeLang(language)">
           <el-option v-for="item in options" :key="item.language" :label="item.label" :value="item.language">
           </el-option>
         </el-select>
@@ -59,10 +59,10 @@ export default {
         language: 'en',
         label: '英语'
       }],
-      language: localStorage.lang || '选择语言',
+      language: localStorage.lang || '语言',
       ruleForm: {
         account: '',
-        password: '',
+        password: ''
       },
       rules: {
         account: [
@@ -79,6 +79,9 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.openFullScreen()
+          setTimeout(() => {
+            this.$router.push('home')
+          }, 1000)
           // this.msgShow("success..");
         } else {
           return false
@@ -129,63 +132,39 @@ export default {
     width: 100%;
     height: 100%;
   }
-
-  .login-top {
-    /*position: absolute;*/
-    /*top: 50%;*/
-    /*width: 100%;*/
-    /*margin-top: -230px;*/
-    /*text-align: center;*/
-    /*font-size: 30px;*/
-    /*color: #fff;*/
+  .login-head{
+    background-color: black; height: 10%;
+    padding-top: 1%;
   }
-  .row-hight {
-    /*margin-top: 20px;*/
-    /*margin-left: 5%;*/
-  }
-
-  .row-hight-message {
-    /*margin-top: 1px;*/
-  }
-
   .login-top-ms {
-    font-size: xx-large;
-    text-align: center;
+    font-size: x-large;
+    /*text-align: center;*/
     color: white;
     /*margin-left: 9%;*/
-    align-content: center;
+    /*align-content: center;*/
     font-family: "Lao UI";
+    width: 40%;
+    margin-left: 41%;
+    text-align: center;
   }
-
   .login-form {
     position: absolute;
     left: 35%;
-    top: 25%;
-    width: 20%;
+    top: 30%;
+    width: 22%;
     height: 25%;
     /*margin: 0px 0 0 -190px;*/
     padding: 40px;
     border-radius: 5px;
     background: #fff;
 
-    /*padding-left: 30%;*/
-    /*margin-top: -15%;*/
-    /*width: 58%;*/
-    /*height: 42%;*/
+    box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset,
+    0 .5em 1em rgba(0, 0, 0, 0.6);
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
+    background: hsla(0,0%,100%,.3);
   }
-
-  .login-p {
-    /*font-size: xx-small;*/
-    /*font-family: Consolas;*/
-  }
-
-  .login-img {
-    /*width: 150px;*/
-    /*height: 150px;*/
-    /*margin-left: 18%;*/
-  }
-
   .el-define-form{
+    margin-top: 10%;
     /*margin: 12% 1%;*/
     /*margin-left: -16%;*/
     /*margin-right: 9%;*/
